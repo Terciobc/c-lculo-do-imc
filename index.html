@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-items: center;
+            background-color: #22D4FD
+;
+        }
+        .titulo{
+            text-align: center;
+            
+        }
+        .centro{
+            text-align: center;
+            margin: auto;
+            padding: 20px;
+            height: 450px;
+            width: 500px;
+            background-color: azure;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 200;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Cálculo do IMC</h1>
+    <div class="centro">
+        
+        <script>
+            function pulaLinha(){
+                document.write('<br><br>')
+            }
+            function mostra(valor){
+                document.write(valor)
+                pulaLinha()
+            }
+            function calculaImc(peso, altura){
+                var imc = peso / (altura*altura);
+                return imc
+            }
+            var nome = prompt('Qual o seu nome?')
+            var pesoPrompt = prompt(`${nome}, informe o seu peso:`)
+            var alturaPrompt = prompt(`${nome}, informe a sua altura:`)
+            var pesoP = parseFloat(pesoPrompt)
+            var alturaP = parseFloat(alturaPrompt)
+            
+            mostra(`<p><strong>${nome}</Strong>:</p>`)
+            mostra(`você possui ${pesoP} kilos.`)
+            mostra(`você tem ${alturaP} de altura.`)
+            mostra(`o seu IMC é de: <strong>${calculaImc(pesoP,alturaP)}</strong>`)
+            
+            
+            
+        </script>
+    </div>
+    
+</body>
+</html>
